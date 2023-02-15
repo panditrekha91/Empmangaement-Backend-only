@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
 import com.Aspire.Empmanagement.Entity.Employee;
 import com.Aspire.Empmanagement.controller.Empcontroller;
@@ -30,11 +31,15 @@ class EmpmanagementApplicationTests {
 		String result= emp.addEmprecord(obj);
 		assertEquals("employee add fail", result);
 		
+	}
+
+	void getEmp()
+	{
+		ResponseEntity<Employee> obj2=emp.getempid(18);
+		
 		
 		
 	}
-
-
 
 	
 
